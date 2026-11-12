@@ -1,0 +1,18 @@
+{
+  "columns": ["sample", "site", "reading"],
+  "rows": [
+    {"id": "s1", "weight": 10, "values": {"sample": "X1", "site": "A", "reading": "4.1"}},
+    {"id": "s2", "weight": 10, "values": {"sample": "X1", "site": "A", "reading": "4.9"}},
+    {"id": "s3", "weight": 6,  "values": {"sample": "X2", "site": "B", "reading": null}},
+    {"id": "s4", "weight": 3,  "values": {"sample": "X3", "site": null, "reading": "7.0"}}
+  ],
+  "dependencies": [
+    {"lhs": ["sample"], "rhs": ["reading"]},
+    {"lhs": ["sample", "site"], "rhs": ["reading"]}
+  ],
+  "query": {
+    "aliases": ["t"],
+    "conditions": [],
+    "projections": ["t.sample", "t.reading"]
+  }
+}

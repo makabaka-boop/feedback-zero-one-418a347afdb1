@@ -1,0 +1,14 @@
+{
+  "columns": ["key", "val"],
+  "rows": [
+    {"id": "a", "weight": 1, "values": {"key": "k", "val": "1"}},
+    {"id": "b", "weight": 1, "values": {"key": "k", "val": "2"}},
+    {"id": "c", "weight": 5, "values": {"key": "m", "val": "9"}}
+  ],
+  "dependencies": [{"lhs": ["key"], "rhs": ["val"]}],
+  "query": {
+    "aliases": ["t", "u"],
+    "conditions": [["t.key", "u.key"]],
+    "projections": ["t.val", "u.val"]
+  }
+}
